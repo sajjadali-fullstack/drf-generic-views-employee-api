@@ -63,17 +63,7 @@ Registered with custom `EmployeeAdmin`:
 
 ---
 
-## Setup
 
-```bash
-git clone https://github.com/sajjadali-fullstack/drf-generic-views-employee-api.git
-cd drf-generic-views-employee-api
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-```
-
----
 
 ## Screenshots
 
