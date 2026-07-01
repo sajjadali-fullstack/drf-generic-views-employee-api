@@ -20,7 +20,5 @@ from testapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', views.EmployeeListAPIView.as_view()), # bcoz this is a class based 
-    path('api-create/', views.EmployeeCreateAPIView.as_view()), # bcoz this is a class based 
-
+c
 ]
