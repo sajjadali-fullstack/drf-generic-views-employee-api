@@ -26,7 +26,7 @@
 
 from testapp.serializers import EmployeeSerializer
 from testapp.models import Employee
-from rest_framework.generics import ListAPIView, CreateAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView
 
 # Create your views / business logic here. 👇
 
@@ -40,3 +40,24 @@ class EmployeeListAPIView(ListAPIView):
 class EmployeeCreateAPIView(CreateAPIView):
     queryset= Employee.objects.all()
     serializer_class = EmployeeSerializer
+
+
+# For Retrive Request
+class EmployeeRetriveView(RetrieveAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
+    lookup_field = 'id'
+
+
+#  For Update Request
+class EmployeeUpdateView(UpdateAPIView):
+    queryset = Employee.objects.all()
+    serializer_class  = EmployeeSerializer
+    lookup_field = 'id'
+
+# For Destroy Request
+class EmployeeDestroyView(DestroyAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
+    lookup_field = 'id'
+
