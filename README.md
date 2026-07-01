@@ -1,3 +1,59 @@
+# Employee API — Django REST Framework Generic Views (Full CRUD)
+
+A complete Employee Management REST API built with DRF's **Generic Views**.
+Full CRUD — List, Create, Retrieve, Update, and Delete — with minimal code.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
+![DRF](https://img.shields.io/badge/DRF-red?style=flat&logo=django&logoColor=white)
+
+---
+
+## Why Generic Views?
+
+| Approach | Lines of Code | Boilerplate |
+|---|---|---|
+| `APIView` (manual) | 15+ per endpoint | High |
+| Generic Views | 3-4 per endpoint | Almost zero |
+
+This project includes both approaches — the manual `APIView` version is
+kept commented in the code as a learning reference.
+
+---
+
+## API Endpoints
+
+| Endpoint | Method | View | Description |
+|---|---|---|---|
+| `/api/` | GET | `EmployeeListAPIView` | List all employees |
+| `/api-create/` | POST | `EmployeeCreateAPIView` | Create new employee |
+| `/api-retrieve/<int:id>` | GET | `EmployeeRetrieveAPIView` | Get single employee |
+| `/api-update/<int:id>` | PUT / PATCH | `EmployeeUpdateView` | Update employee |
+| `/api-destroy/<int:id>` | DELETE | `EmployeeDestroyView` | Delete employee |
+
+---
+
+## Employee Model
+
+| Field | Type | Notes |
+|---|---|---|
+| employee_id | IntegerField | Manual ID |
+| first_name | CharField | max 50 |
+| last_name | CharField | max 49 |
+| email | CharField | max 100 |
+| gender | CharField | max 1 |
+| address | CharField | max 99 |
+| date_of_birth | DateField | — |
+| salary | FloatField | — |
+| position | CharField | max 50 |
+| department | CharField | max 50 |
+| created_at | DateTimeField | auto on create |
+| updated_at | DateTimeField | auto on update |
+
+
+---
+
+---
 
 ## Views — How It Works
 
@@ -57,6 +113,7 @@ class EmployeeAdmin(admin.ModelAdmin):
 ### DELETE /api-destroy/1 — Delete Employee
 ![DELETE](screenshots/delete.png)
 
+
 ---
 
 ## What's Next
@@ -71,3 +128,6 @@ class EmployeeAdmin(admin.ModelAdmin):
 
 **Sajjad Ali** — [GitHub](https://github.com/sajjadali-fullstack) ·
 [Portfolio](https://sajjadali-fullstack-portfolio.netlify.app/)
+---
+
+## Project Structure
