@@ -1,4 +1,3 @@
----
 
 ## Views — How It Works
 
